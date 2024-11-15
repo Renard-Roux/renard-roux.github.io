@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnages</title>
+</head>
+<body style="background-color:red">
+    <header style="background-color:black">
+        <h1 style="font-size:80px;color:red">Malicieuse Famille Suna - Personnages</h1>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td style="border:solid"><a href="cornichon.html"><img width="500" src="co.png"></a></td>
+                <td style="border:solid"><a href="jimmy.html"><img width="485" src="j.png"></a></td>
+                <td style="border:solid"><a href="frederic.html"><img width="485" src="f.png"></a></td>
+            </tr>
+            <tr>
+                <td style="border:solid"><a href="kimberley.html"><img width="485" src="k.png"></a></td>
+                <td style="border:solid"><a href="esther.html"><img width="485" src="e.png"></a></td>
+                <td style="border:solid"><a href="bart.html"><img width="485" src="ba.png"></a></td>
+            </tr>
+            <tr>
+                <td style="border:solid"><a href="chukinette.html"><img width="485" src="ch.png"></a></td>
+                <td style="border:solid"><a href="bernadette.html"><img width="485" src="be.png"></a></td>
+            </tr>
+        </table>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Séquence du Konami Code
+            const konamiCode = [
+                "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
+                "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
+                "b", "a"
+            ];
+
+            let userInput = [];
+            
+            // Écouteur pour détecter les touches pressées
+            document.addEventListener("keydown", (event) => {
+                userInput.push(event.key);
+                
+                // Garder uniquement les dernières entrées correspondant à la longueur du Konami Code
+                if (userInput.length > konamiCode.length) {
+                    userInput.shift();
+                }
+
+                // Vérification de la correspondance avec le Konami Code
+                if (JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
+                    // Redirection vers la page souhaitée
+                    window.location.href = "erescarm.html";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
