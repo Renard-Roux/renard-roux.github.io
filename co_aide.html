@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+    <style>
+        @font-face {
+            font-family: 'MaPolice';
+            src: url('police.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body style="background-color:black">
+    <header style="background-color:green">
+        <h1 style="font-size:80px;color:black">Malicieuse Famille Suna - ???</h1>
+    </header>
+    <main>
+        <p style="font-family: 'MaPolice';color:green;font-size:60px;">
+            &gt; Hey !<br>
+            &gt; Je vois que tu as suivi mes conseils...<br>
+            &gt; Mais la date de sortie de mon chapitre n'est pas encore prête...<br>
+            &gt; Cependant, je peux te donner le jour où vous sera donné la date...<br>
+            &gt; let jour = <a href="cornichon.html">cornichon</a>.rang * <a href="jimmy.html">jimmy</a>.rang + <a href="mamudor.html">mamudor</a>.rang<br>
+            &gt; let mois = <a href="mamudor.html">mamudor</a>.rang<br>
+            &gt; <a onclick="verifyAnswer();">verifyAnswer()</a><br>
+        </p>
+    </main>
+    <footer style="background-color:green">
+        <a onclick="alert('> Tu as esssayé de regarder la date avant les autres...\n> Il n\'y a plus de retour en arrière...');" style="text-decoration:none;"><h1 style="font-size:40px;color:black;">Retour en arrière</h1></a>
+    </footer>
+    <script>
+        var cornichon = {rang:3};
+        var mamudor = {rang:1};
+        var jimmy = {rang:10};
+        let jour = 31;
+        let mois = 1;
+        function verifyAnswer()
+        {
+            let chiffre = prompt("Jour :");
+            if (chiffre == jour) alert("> Gagné !");
+            else alert("> Ce n'est pas ça...");
+            chiffre = prompt("Mois :");
+            if (chiffre == mois) alert("> Gagné !");
+            else alert("> Ce n'est pas ça...");
+        }
+    </script>
+</body>
+</html>
